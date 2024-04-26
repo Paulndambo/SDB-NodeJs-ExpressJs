@@ -12,6 +12,7 @@ app.use(morgan('dev'));
 
 // ROUTES
 const productsRoutes = require('./routes/products');
+const customerRoutes = require('./routes/customers');
 
 // HTTP METHODS
 /*
@@ -36,6 +37,10 @@ app.get('/greet', (req, res) => {
 // Products routes
 // http://localhost:5000/products
 app.use('/products', productsRoutes);
+
+// customer routes
+// http://localhost:5000/customers
+app.use('/customers', customerRoutes)
 
 // start the server
 app.listen(PORT, () => {
